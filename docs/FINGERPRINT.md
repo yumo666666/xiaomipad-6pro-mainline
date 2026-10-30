@@ -24,7 +24,7 @@ full installation, initial setup and user acceptance on the test unit.
 v0.6.0 automatically supports the first local account created by initial setup
 (UID 1000), without a preconfigured username. Use the exact matching kernel, FPC
 module, device tree and OEM firmware. The current scope is **one finger for that account**. Kernel/module hashes and wiring
-checks must not be bypassed. An experimental one-database, multiple-finger design is documented in [Multiple fingers in one template](FINGERPRINT-MULTI.md); it needs local changes that are not part of the packaged component.
+checks must not be bypassed. An experimental one-database, multiple-finger design is documented in [Multiple fingers in one template](FINGERPRINT-MULTI.md); its implementation is in the component source but remains outside the one-finger release scope until a fresh native acceptance.
 
 A temporary RAM boot does not install a kernel for the next power-on. Fingerprint
 availability after reboot requires the matching kernel and modules to be

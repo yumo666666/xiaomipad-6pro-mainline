@@ -1,11 +1,11 @@
 # Multiple fingers in one fingerprint template (experimental)
 
-> **Status: experimental, not part of the packaged component.** The behaviour
-> below was tested on a liuqin unit with a locally modified FPC1264 TOD driver,
-> enrollment provider and an FP3-to-raw-database extractor. Those changes are
-> not in the component shipped by this repository, which still refuses a second
-> enrollment. The page records the design and the measured result for future
-> work.
+> **Status: experimental, implementation included in the component source.**
+> The behaviour below was tested on a liuqin unit with the FPC1264 TOD driver,
+> enrollment provider and FP3-to-raw-database extractor now in
+> `device/fingerprint/oem`. The release component still advertises and supports
+> one finger until this path passes a fresh native acceptance run; the page
+> records the design and the measured result for that work.
 
 The FPC1264 stores its templates in an opaque database inside the TEE, not in
 the file fprintd writes. That database has five slots, and the TA can append a
@@ -40,7 +40,7 @@ fprintd's gallery therefore stays at one entry, so `verify_start()` loads the
 database that contains every enrolled finger. Matching is still done by the TA:
 the host never receives a template to compare.
 
-The three pieces that differ from the packaged component are:
+The implementation adds three pieces to the component:
 
 | Piece | Change |
 | --- | --- |

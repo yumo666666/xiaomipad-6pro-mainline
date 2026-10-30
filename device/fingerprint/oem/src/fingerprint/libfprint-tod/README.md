@@ -21,7 +21,9 @@ session, accepted END, one-template inventory and opaque database export.
 deserialize/compatibility/equality in process. `enrol_publish.py` publishes
 exclusively to the normal private fprintd file store. Accepted export survives
 publication failure in the pending directory; uncertain export is preserved
-without automatically repeating enrolment. Current scope is one finger/user.
+without automatically repeating enrolment. Release scope is one finger/user;
+the one-database, multiple-finger append path is experimental and needs a fresh
+native acceptance before it becomes a support claim.
 
 The adapter now requests UPDATED_DATABASE on genuine matches. Completed,
 cleaned success may replace the in-memory enrolled print and attach its original

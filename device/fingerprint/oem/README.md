@@ -9,9 +9,13 @@ cancellation to that dialog; fprintd stores the resulting fingerprint and
 provides the standard GDM login and lock-screen verification interface. It does
 not add a separate everyday unlock application or modify GNOME Settings.
 
-The current candidate supports **one configured Linux account and one finger**.
-Native enrollment and login/unlock have passed on the test unit as described
-below. The default image/kernel lock is not changed by this optional component.
+The current candidate supports **one configured Linux account**. The release
+scope is one finger; the source also carries an experimental one-database,
+multiple-finger path described in the
+[multi-finger notes](../../../docs/FINGERPRINT-MULTI.md), pending a fresh native
+acceptance. Native enrollment and login/unlock have passed on the test unit as
+described below. The default image/kernel lock is not changed by this optional
+component.
 
 ## Current validation boundary
 
